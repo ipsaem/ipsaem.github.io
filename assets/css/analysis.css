@@ -11,3 +11,14 @@
 .outline-toggle{display:none;margin-left:auto;padding:4px 9px;font:inherit;font-size:11px;color:var(--editor-fg);background:transparent;border:1px solid var(--border-color);border-radius:3px}
 @media(min-width:1151px) and (max-width:1400px){.analysis-content .analysis-split{grid-template-columns:1fr}.analysis-content .code-panel{position:static}}
 @media(max-width:800px){.outline-toggle{display:block}.analysis-outline{display:none;position:fixed;right:0;top:85px;bottom:0;width:min(280px,85vw);z-index:140;box-shadow:-12px 0 24px #0004}.analysis-outline.is-open{display:block}}
+
+.study-source{padding:16px 20px;border-left:2px solid var(--accent-color);background:var(--sidebar-bg);margin:24px 0}.study-source h2{font-size:13px;color:var(--heading-fg);margin:0 0 8px}.study-source p{font-size:12px;line-height:1.9;color:var(--fg-soft)}.study-source a{display:inline-block;font-size:11px;margin:6px 22px 0 0}.chapter-basis{font-size:10px;color:var(--fg-mute);overflow-wrap:anywhere}
+
+.outline-directory { border-bottom:1px solid var(--border-color); }
+.outline-directory > summary { cursor:pointer; padding:12px 14px; font:600 12px var(--font-mono, monospace); overflow-wrap:anywhere; }
+.outline-directory.active-directory > summary { color:var(--accent-color); }
+.analysis-outline .outline-directory a { padding-left:22px; }
+.directory-files { margin-bottom:24px; border:1px solid var(--border-color); border-radius:6px; padding:12px 16px; }
+.directory-files summary { cursor:pointer; font-size:13px; overflow-wrap:anywhere; }
+#directory-file-list { display:flex; flex-wrap:wrap; gap:8px 16px; margin-top:14px; }
+#directory-file-list a { font:12px monospace; color:var(--accent-color); overflow-wrap:anywhere; }

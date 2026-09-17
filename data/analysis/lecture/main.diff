@@ -1,0 +1,28 @@
+--- linux-0.11/init/main.c
++++ lab/init/main.c
+@@ -12,7 +12,7 @@
+  * we need this inline - forking from kernel space will result
+  * in NO COPY ON WRITE (!!!), until an execve is executed. This
+  * is no problem, but for the stack. This is handled by not letting
+- * main() use the stack at all after fork(). Thus, no function
++ * main()x use the stack at all after fork(). Thus, no function
+  * calls - which means inline code for fork too, as otherwise we
+  * would use the stack upon exit from 'fork()'.
+  *
+@@ -20,6 +20,8 @@
+  * won't be any messing with the stack from main(), but we define
+  * some others too.
+  */
++static inline fork(void) __attribute__((always_inline));
++static inline pause(void) __attribute__((always_inline));
+ static inline _syscall0(int,fork)
+ static inline _syscall0(int,pause)
+ static inline _syscall1(int,setup,void *,BIOS)
+@@ -107,6 +109,7 @@
+  * Interrupts are still disabled. Do necessary setups, then
+  * enable them
+  */
++
+  	ROOT_DEV = ORIG_ROOT_DEV;
+  	drive_info = DRIVE_INFO;
+ 	memory_end = (1<<20) + (EXT_MEM_K<<10);
