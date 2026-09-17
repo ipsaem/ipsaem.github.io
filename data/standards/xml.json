@@ -1,0 +1,266 @@
+{
+  "id": "xml",
+  "title": "XML",
+  "version": "1.0 · 제5판",
+  "status": "W3C Recommendation · 2008-11-26",
+  "scope": "짧은 조항 번역 · 핵심 규칙 해설",
+  "description": "문서의 구조와 문자, DTD와 처리기의 책임을 살펴봅니다.",
+  "scopeNote": "명세 전문 번역이 아닙니다. 일부 짧은 조항을 번역하고 핵심 규칙을 해설했습니다. 예제는 잎샘에서 작성했습니다. 규범적 기준은 W3C의 영어 원문입니다.",
+  "sourceUrl": "https://www.w3.org/TR/2008/REC-xml-20081126/",
+  "errataUrl": "https://www.w3.org/XML/xml-V10-5e-errata",
+  "licenseUrl": "https://www.w3.org/copyright/document-license/",
+  "attribution": "Extensible Markup Language (XML) 1.0 (Fifth Edition). Copyright © 2008 W3C® (MIT, ERCIM, Keio), All Rights Reserved. Editors: Tim Bray, Jean Paoli, C. M. Sperberg-McQueen, Eve Maler, François Yergeau.",
+  "notice": "잎샘의 비공식 학습 노트입니다. W3C가 승인한 번역이 아니며 번역에 오류가 있을 수 있습니다. 해설과 예제는 원문에 포함된 내용이 아닙니다.",
+  "glossary": [
+    {
+      "en": "well-formed",
+      "ko": "정형인"
+    },
+    {
+      "en": "valid",
+      "ko": "유효한"
+    },
+    {
+      "en": "element",
+      "ko": "요소"
+    },
+    {
+      "en": "attribute",
+      "ko": "속성"
+    },
+    {
+      "en": "entity",
+      "ko": "엔터티"
+    },
+    {
+      "en": "fatal error",
+      "ko": "치명적 오류"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "document",
+      "title": "정형성과 유효성",
+      "references": [
+        {
+          "label": "§2.1 정형 문서",
+          "anchor": "sec-well-formed"
+        },
+        {
+          "label": "§2.8 문서형 선언",
+          "anchor": "sec-prolog-dtd"
+        }
+      ],
+      "translations": [],
+      "notes": [
+        "루트 요소는 하나여야 하며 태그가 올바르게 중첩되어야 합니다. DTD에 대한 유효성은 정형성과 별도의 조건입니다."
+      ],
+      "examples": [
+        {
+          "title": "중첩과 루트",
+          "code": "<shelf><book>잎샘</book></shelf>",
+          "result": "하나의 루트 안에서 요소가 닫힙니다.",
+          "valid": true,
+          "root": "shelf"
+        },
+        {
+          "title": "교차해서 닫힌 태그",
+          "code": "<shelf><book>잎샘</shelf></book>",
+          "result": "종료 순서가 어긋나 정형 문서가 아닙니다.",
+          "valid": false
+        }
+      ],
+      "question": "태그를 하나씩 스택에 넣었다가 꺼내 보세요."
+    },
+    {
+      "id": "attributes",
+      "title": "태그와 속성",
+      "references": [
+        {
+          "label": "§3.1 태그",
+          "anchor": "sec-starttags"
+        },
+        {
+          "label": "속성 이름의 유일성",
+          "anchor": "uniqattspec"
+        }
+      ],
+      "translations": [
+        {
+          "original": "An attribute name MUST NOT appear more than once in the same start-tag or empty-element tag.",
+          "ko": "속성 이름은 같은 시작 태그 또는 빈 요소 태그에 두 번 이상 나타나서는 안 됩니다.",
+          "section": "§3.1",
+          "anchor": "uniqattspec"
+        }
+      ],
+      "notes": [
+        "시작·종료 이름은 대소문자를 구별합니다. 속성값은 따옴표로 감싸며, 속성 나열 순서는 의미를 바꾸지 않습니다."
+      ],
+      "examples": [
+        {
+          "title": "중복 속성",
+          "code": "<book id=\"one\" id=\"two\"/>",
+          "result": "같은 태그에서 id를 두 번 사용하면 오류입니다.",
+          "valid": false
+        },
+        {
+          "title": "빈 요소",
+          "code": "<book id=\"one\"/>",
+          "result": "<book id=\"one\"></book>처럼 내용이 없는 요소입니다.",
+          "valid": true,
+          "root": "book"
+        }
+      ],
+      "question": "id와 ID로 바꾸면 같은 이름일까요?"
+    },
+    {
+      "id": "text",
+      "title": "문자 데이터와 CDATA",
+      "references": [
+        {
+          "label": "§2.4 문자 데이터",
+          "anchor": "syntax"
+        },
+        {
+          "label": "§2.7 CDATA",
+          "anchor": "sec-cdata-sect"
+        },
+        {
+          "label": "§2.5 주석",
+          "anchor": "sec-comments"
+        }
+      ],
+      "translations": [
+        {
+          "original": "CDATA sections cannot nest.",
+          "ko": "CDATA 구간은 중첩될 수 없습니다.",
+          "section": "§2.7",
+          "anchor": "sec-cdata-sect"
+        }
+      ],
+      "notes": [
+        "텍스트의 <와 &는 참조로 표현합니다. CDATA에서는 참조를 해석하지 않으며 ]]>가 구간을 끝냅니다. 주석 안에는 --를 넣지 않습니다."
+      ],
+      "examples": [
+        {
+          "title": "서로 다른 표기, 같은 문자",
+          "code": "<note><escaped>3 &lt; 7 &amp; 8</escaped><raw><![CDATA[3 < 7 & 8]]></raw></note>",
+          "result": "두 자식 요소의 문자 데이터는 같습니다.",
+          "valid": true,
+          "texts": [
+            "3 < 7 & 8",
+            "3 < 7 & 8"
+          ]
+        }
+      ],
+      "question": "CDATA 안의 &amp;를 실제로 읽으면 무엇이 남을까요?"
+    },
+    {
+      "id": "dtd",
+      "title": "DTD와 속성 정규화",
+      "references": [
+        {
+          "label": "§3.3.1 속성 형식",
+          "anchor": "sec-attribute-types"
+        },
+        {
+          "label": "§3.3.2 기본값",
+          "anchor": "sec-attr-defaults"
+        },
+        {
+          "label": "§3.3.3 정규화",
+          "anchor": "AVNormalize"
+        }
+      ],
+      "translations": [],
+      "notes": [
+        "DTD는 요소·속성의 제약과 기본값을 선언합니다. 비-CDATA 속성값은 정규화 과정에서 연속 공백과 양끝 공백이 정리됩니다."
+      ],
+      "examples": [
+        {
+          "title": "NMTOKENS로 선언한 속성",
+          "code": "<!DOCTYPE book [\n  <!ELEMENT book EMPTY>\n  <!ATTLIST book labels NMTOKENS #IMPLIED>\n]>\n<book labels=\"  xml   notes  \"/>",
+          "result": "labels의 정규화된 값은 \"xml notes\"입니다.",
+          "valid": true,
+          "attribute": [
+            "labels",
+            "xml notes"
+          ]
+        }
+      ],
+      "question": "NMTOKENS를 CDATA로 바꿔 두 결과를 비교해 보세요."
+    },
+    {
+      "id": "encoding",
+      "title": "문자 범위와 인코딩",
+      "references": [
+        {
+          "label": "§2.2 문자",
+          "anchor": "charsets"
+        },
+        {
+          "label": "§2.11 줄 끝",
+          "anchor": "sec-line-ends"
+        },
+        {
+          "label": "§4.3.3 문자 인코딩",
+          "anchor": "charencoding"
+        }
+      ],
+      "translations": [],
+      "notes": [
+        "문자 범위와 바이트 인코딩은 다릅니다. XML 처리기는 UTF-8·UTF-16을 지원해야 하며, XML 1.0에서 NUL은 문자 참조로도 허용되지 않습니다."
+      ],
+      "examples": [
+        {
+          "title": "허용되지 않는 문자",
+          "code": "<note>&#x0;</note>",
+          "result": "0번 문자는 XML 1.0 문자 범위를 벗어납니다.",
+          "valid": false
+        },
+        {
+          "title": "UTF-8 선언",
+          "code": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<note>잎샘</note>",
+          "result": "이 예제의 파일 바이트도 UTF-8로 저장해야 합니다.",
+          "valid": true,
+          "root": "note"
+        }
+      ],
+      "question": "선언만 바꾸는 것과 파일을 변환하는 것은 같을까요?"
+    },
+    {
+      "id": "processors",
+      "title": "처리기가 보장하는 것",
+      "references": [
+        {
+          "label": "§1.2 용어",
+          "anchor": "sec-terminology"
+        },
+        {
+          "label": "§5.1 처리기 종류",
+          "anchor": "proc-types"
+        },
+        {
+          "label": "§5.2 처리기 사용",
+          "anchor": "safe-behavior"
+        }
+      ],
+      "translations": [],
+      "notes": [
+        "치명적 오류 뒤에는 정상 처리를 계속하지 않습니다. 비검증 처리기의 외부 엔터티·DTD 처리는 검증 처리기와 같은 보장을 제공하지 않습니다."
+      ],
+      "examples": [
+        {
+          "title": "정형이지만 DTD에 부적합",
+          "code": "<!DOCTYPE shelf [\n  <!ELEMENT shelf (book)>\n  <!ELEMENT book (#PCDATA)>\n]>\n<shelf/>",
+          "result": "일반 파싱은 가능하지만 DTD 검증은 실패합니다.",
+          "valid": true,
+          "dtdValid": false,
+          "root": "shelf"
+        }
+      ],
+      "question": "사용 중인 파서가 DTD까지 검증하는지 확인해 보세요."
+    }
+  ],
+  "sourceSha256": "f58a4b9e1e5b8bac13fb55c4e5c7c8c5e2c176aa45ee68e2f1ab2498511927ec"
+}

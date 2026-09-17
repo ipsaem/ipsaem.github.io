@@ -1,8 +1,47 @@
-# 김치하 한영사전 복원 아카이브
+# 잎샘 · 단어와 코드를 읽는 곳
 
 CurrensAdAstra.github.io의 편집기형 레이아웃, 색상, 타이포그래피를 적용한 GitHub Pages 정적 사이트입니다. `assets/css/reference.css`는 해당 프로젝트의 스타일 원본이며, 사전 전용 변경은 `dictionary.css`에 있습니다.
 
-## 복구 범위
+
+## 수록 콘텐츠
+
+- XML **1.0 제5판** 및 YAML **1.2.2**: 각각 6개 주제의 짧은 조항 발췌 번역, 한국어 해설, 직접 작성한 예제. **명세 전문 번역이 아닙니다.**
+- 김치하 한영사전: 보존본에서 복구한 117개 항목.
+- SQLite **2.0.0**: API 진입, 토큰화, 문장 실행, VDBE, B-tree/Pager 경계, 저널에 관한 6개 분석 노트.
+- Linux kernel **0.11**: 초기화, 시스템 콜, 스케줄링, fork, copy-on-write, 파일 읽기에 관한 6개 분석 노트.
+
+`analysis.html?project=sqlite`와 `analysis.html?project=linux`에서 해설과 줄 번호를 가진 원본 코드를 함께 읽을 수 있습니다. 목차, 이전/다음, 전체 파일, 관련 파일 선택, 줄 링크, 브라우저 뒤로 가기를 지원합니다.
+
+## 분석 자료의 출처와 범위
+
+SQLite는 공식 GitHub 미러의 `version-2.0.0` 태그가 가리키는 `61090c5f320741c178a08937070de08a722cbd25` 커밋을 사용했습니다. 원본 `VERSION` 파일도 2.0.0임을 확인했습니다. Linux는 kernel.org의 `Historic/old-versions/linux-0.11.tar.gz`를 사용했습니다.
+
+각 프로젝트의 `data/analysis/*.json`에는 직접 작성한 해설, 해당 소스에서 읽은 구간, 관련 원본 파일, 파일 SHA-256, 다운로드 URL과 원본 압축 파일 SHA-256이 들어 있습니다. 원본 파일의 저작권 및 주석을 그대로 보존했습니다. 원 프로젝트 전체를 미러링한 것이 아니라 분석에 필요한 파일을 수록했습니다.
+
+이 콘텐츠는 특정 버전의 소스를 읽은 정적 분석입니다. 빌드·부팅·SQL 실행을 실험한 결과를 의미하지 않으며, 전체 코드베이스의 모든 기능을 분석한 것은 아닙니다.
+
+## 표준 노트
+
+`standards.html?standard=xml`과 `standards.html?standard=yaml`에서 읽습니다. 왼쪽 메뉴의 `{}`는 코드 분석, `Aa`는 사전, `§`는 표준 읽기로 고정되어 있습니다.
+
+`data/standards/*.json`은 원문 절의 앵커 링크, 짧은 영어 인용 및 한국어 번역, 독립적으로 작성한 해설·예제, 용어표와 원문 고지를 담습니다. 전체 명세의 번역이나 표준 기관이 승인한 번역이 아닙니다. YAML 원문은 변경하지 않는 조건으로 복사를 허용하므로 전문 수정·번역본을 재게시하지 않습니다. 해석의 기준은 각 기관의 공식 영어 명세입니다.
+
+- XML: https://www.w3.org/TR/2008/REC-xml-20081126/
+- YAML: https://yaml.org/spec/1.2.2/
+- 원본 응답의 SHA-256은 각 JSON의 `sourceSha256`에 기록합니다.
+- 예제는 원문에서 복사하지 않았으며, `expected`, `valid`, `dtdValid` 등의 검증 기대값을 포함합니다.
+- XML 예제는 `python3 scripts/check_xml_examples.py`로 정형성과 값을 확인합니다. DTD 검증은 설치된 `xmllint`가 있으면 함께 수행합니다.
+- YAML 예제는 검증 시 별도 임시 디렉터리에 설치한 `yaml@2.8.1`의 YAML 1.2 Core 모드로 확인했습니다. 사이트에는 파서나 패키지 설치가 필요 없습니다.
+
+## 사전 추가
+
+`data/catalog.json`에 사전 ID, 이름, 설명, 데이터 경로, 시기, 출처와 소개를 등록하면 사전 목록과 선택 화면이 자동으로 생성됩니다. 현재 수록 사전은 김치하 한영사전입니다.
+
+각 사전 데이터는 `entries`와 `sources`를 갖습니다. 항목은 `id`, `kor`, `eng`, `contributor`, `sources`를 사용하며, 항목별 출처에는 `url`과 14자리 `timestamp`를 넣습니다. 현재 검색 화면은 한글·영문 대응 사전을 지원합니다. 다른 구조의 사전은 해당 데이터에 맞춰 화면을 확장해야 합니다.
+
+전체 검색에서도 사전별 레코드를 별도로 유지합니다. `?dictionary=kimchiha`처럼 사전 선택을 공유할 수 있습니다. 기존 검색 URL도 계속 동작합니다.
+
+## 김치하 한영사전 복구 범위
 
 - 사용자가 제공한 2002-12-09의 2페이지와, 2003-05~06 보존본의 1~10페이지: 총 11개 응답.
 - 2002년 페이지에는 총 95건, 2003년 페이지에는 총 117건으로 표시됩니다. 요청 날짜와 실제 Wayback 리디렉션 날짜를 혼동하지 않도록 최종 URL을 보존했습니다.
@@ -18,7 +57,7 @@ CurrensAdAstra.github.io의 편집기형 레이아웃, 색상, 타이포그래�
 ```sh
 python3 -m http.server 8000
 python3 scripts/restore.py
-node --test scripts/dictionary.test.cjs
+node --test scripts/*.test.cjs
 ```
 
 `restore.py`는 보존한 원본에서 JSON을 재생성하며 네트워크 요청을 하지 않습니다. 검색·초성·정렬·페이지 선택은 URL 쿼리로 공유할 수 있습니다. 테마 설정만 브라우저에 저장됩니다.
