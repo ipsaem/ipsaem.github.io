@@ -6,7 +6,10 @@ let project, current = 0, file = '', full = false;
 const menu = document.querySelector('.menu-toggle');
 function closeMenu(){ $('sidebar-container').classList.remove('open'); menu.setAttribute('aria-expanded','false'); }
 menu.addEventListener('click',()=>menu.setAttribute('aria-expanded',String($('sidebar-container').classList.toggle('open'))));
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
+const outlineToggle = $('outline-toggle');
+function closeOutline(){ $('analysis-outline').classList.remove('is-open'); outlineToggle.setAttribute('aria-expanded','false'); }
+outlineToggle.addEventListener('click',()=>outlineToggle.setAttribute('aria-expanded',String($('analysis-outline').classList.toggle('is-open'))));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeMenu();if($('analysis-outline').classList.contains('is-open')){closeOutline();outlineToggle.focus();}}});
 function theme(value){ document.documentElement.dataset.theme=value; $('theme').setAttribute('aria-label',value==='dark'?'밝은 테마로 전환':'어두운 테마로 전환'); }
 try{theme(localStorage.getItem('theme')==='light'?'light':'dark');}catch{theme('dark');}
 $('theme').addEventListener('click',()=>{const value=document.documentElement.dataset.theme==='dark'?'light':'dark';theme(value);try{localStorage.setItem('theme',value);}catch{}});
@@ -49,8 +52,8 @@ function render(){
 }
 function choose(index){
  current=index;file=project.chapters[current].file;full=false;
- history.pushState(null,'',pageUrl());render();closeMenu();
- $('chapter-title').scrollIntoView({block:'start'});
+ history.pushState(null,'',pageUrl());render();closeMenu();closeOutline();
+ $('chapter-title').scrollIntoView({block:'start'});$('chapter-title').focus({preventScroll:true});
 }
 function restoreLocation(){
  const p=new URLSearchParams(location.search);
@@ -68,13 +71,14 @@ window.addEventListener('popstate',()=>{if(project)restoreLocation();});
 (async()=>{
  try{
   const response=await fetch(`data/analysis/${projectId}.json`);if(!response.ok)throw Error(response.status);project=await response.json();
+  $('outline-project').textContent=`${project.title} ${project.version}`;
   $('project-name').textContent=project.title; $('project-version').textContent=project.version; $('project-heading').textContent=`${project.title} ${project.version}`;
   $('panel-title').textContent=`${projectId}/source.notes`; $('project-description').textContent=project.description;
   $('project-source').href=project.sourceUrl; $('project-archive').href=project.archiveUrl;
   $('revision').textContent=`분석 기준: ${project.revision}`; $('archive-hash').textContent=`원본 압축 파일 SHA-256: ${project.archiveSha256}`;
   document.querySelector(`[data-project="${projectId}"]`).setAttribute('aria-current','page');
   project.chapters.forEach((chapter,index)=>{
-   for(const parent of [$('chapter-nav'),$('reading-flow')]) {const a=document.createElement('a');a.href=`analysis.html?project=${projectId}&chapter=${chapter.id}`;a.dataset.chapter=chapter.id;a.textContent=`${String(index+1).padStart(2,'0')} ${chapter.title}`;a.addEventListener('click',e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();choose(index);});parent.append(a);}
+   for(const parent of [$('chapter-nav')]) {const a=document.createElement('a');a.href=`analysis.html?project=${projectId}&chapter=${chapter.id}`;a.dataset.chapter=chapter.id;a.textContent=`${String(index+1).padStart(2,'0')} ${chapter.title}`;a.addEventListener('click',e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();choose(index);});parent.append(a);}
   });
   for(const name of Object.keys(project.files)){const option=document.createElement('option');option.value=name;option.textContent=name;$('source-file').append(option);}
   $('analysis-body').hidden=false; $('load-status').hidden=true;restoreLocation();
