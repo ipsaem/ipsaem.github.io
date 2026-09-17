@@ -7,7 +7,7 @@ CurrensAdAstra.github.io의 편집기형 레이아웃, 색상, 타이포그래�
 
 - XML **1.0 제5판** 및 YAML **1.2.2**: 각각 6개 주제의 짧은 조항 발췌 번역, 한국어 해설, 직접 작성한 예제. **명세 전문 번역이 아닙니다.**
 - 김치하 한영사전: 보존본에서 복구한 117개 항목.
-- SQLite **2.0.0**: API 진입, 토큰화, 문장 실행, VDBE, B-tree/Pager 경계, 저널에 관한 6개 분석 노트.
+- SQLite **2.0.0**: CLI, API 진입, 토큰화, 문장 실행, VDBE, 초기 WHERE 계획, B-tree/Pager 경계, 저널에 관한 8개 분석 노트. 데이터베이스 강의의 3.53.4와 대조한 버전별 설명을 포함합니다.
 - Linux kernel **0.11**: 루트 빌드와 14개 디렉터리 개요, 강의 실습 `init/main.c` 6개 주제, 시스템 콜·스케줄링·fork·copy-on-write·파일 읽기 5개 주제, 총 26개 분석 노트. 공식 소스 100개 파일과 강의 실습본을 수록합니다. 오른쪽 아웃라인은 디렉터리별로 접고 펼칠 수 있고, 각 주제에서 해당 디렉터리의 파일 전체를 열 수 있습니다.
 
 `analysis.html?project=sqlite`와 `analysis.html?project=linux`에서 해설과 줄 번호를 가진 원본 코드를 함께 읽을 수 있습니다. 목차, 이전/다음, 전체 파일, 관련 파일 선택, 줄 링크, 브라우저 뒤로 가기를 지원합니다.
@@ -25,6 +25,13 @@ SQLite는 공식 GitHub 미러의 `version-2.0.0` 태그가 가리키는 `61090c
 `~/lectures/read_linux_kernel_source/lab/init/main.c`를 읽고 초기 시스템 콜 래퍼, 부팅 정보와 메모리 경계, CMOS 시각, 초기화·사용자 모드 전환, `/etc/rc`, 셸 재시작의 설명을 작성했습니다. 제공된 폴더에는 이 실습 소스 한 파일이 있었으며 별도 강의 원고는 없었습니다. 설명은 해당 코드에서 작성한 분석입니다.
 
 실습본은 `data/analysis/lecture/main.c`에 바이트 그대로 보존했고, 공식 0.11의 `init/main.c`와 차이를 `main.diff`에 기록했습니다. 실습본에는 `always_inline` 선언 두 줄, 주석의 `main()x` 표기, 빈 줄이 추가되어 있습니다. 코드 뷰와 주제 설명에서 실습본과 공식 원본을 구분합니다. 실습본의 빌드나 부팅은 수행하지 않았습니다.
+
+## QEMU 실행 안내와 SQLite 강의 대조
+
+- `analysis.html?project=linux#learning-guide`: QEMU 설치, Image와 루트 디스크 준비, 루트 장치 값 확인, PC/TCG 실행 명령, 문제 확인, GDB 연결. 오른쪽 아웃라인에서도 바로 열 수 있습니다.
+- QEMU 11.1.1에서 빈 임시 이미지와 `-S -display none`으로 안내의 장치 옵션을 확인했습니다. Linux 0.11 부팅·셸 진입은 검증하지 않았습니다. 강의 폴더에는 부팅 이미지와 루트 파일시스템이 없습니다.
+- `analysis.html?project=sqlite#learning-guide`: `~/lectures/database`의 2–7주차 소스 안내와 동봉 3.53.4를 기존 2.0.0과 대조합니다. 준비된 문장·레지스터 VM·현대 Planner·WAL을 초기 버전과 구분하고, CLI 및 초기 인덱스 선택 노트를 추가했습니다.
+- 읽은 로컬 자료와 동봉 소스의 SHA-256 및 원본 아카이브 SHA3-256은 `data/analysis/lecture/database-review.json`에 기록했습니다. 강의의 전체 프로그램을 재실행한 검증은 아닙니다.
 
 ## 표준 노트
 

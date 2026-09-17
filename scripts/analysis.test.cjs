@@ -5,7 +5,7 @@ const fs=require('node:fs');
 for(const id of ['sqlite','linux']) {
  const data=require(`../data/analysis/${id}.json`);
  test(`${id}: chapter targets and preserved source hashes`,()=>{
-  assert.equal(data.id,id);assert.equal(data.chapters.length,id==='linux'?26:6);
+  assert.equal(data.id,id);assert.equal(data.chapters.length,id==='linux'?26:8);
   assert.equal(new Set(data.chapters.map(c=>c.id)).size,data.chapters.length);
   for(const source of Object.values(data.files)) assert.equal(crypto.createHash('sha256').update(source.text).digest('hex'),source.sha256);
   for(const chapter of data.chapters){
@@ -51,4 +51,31 @@ test('Linux directory guide covers every official directory and source file',()=
   assert.ok(d.chapters.some(c=>c.id===dir.chapter&&c.directory===dir.path));
  }
  for(const chapter of d.chapters)assert.ok(expected.includes(chapter.directory));
+});
+
+test('learning guides retain version boundaries and valid local references',()=>{
+ for(const id of ['linux','sqlite']){
+  const d=require(`../data/analysis/${id}.json`);
+  assert.ok(d.guide.title&&d.guide.sections.length>=4);
+  for(const section of d.guide.sections){
+   assert.ok(section.title&&section.paragraphs.length);
+   if(section.table)for(const row of section.table.rows)assert.equal(row.length,section.table.headers.length);
+   for(const ref of section.references||[]){
+    if(ref.url.startsWith('https://'))continue;
+    if(ref.url.startsWith('analysis.html?')){
+     const url=new URL(ref.url,'https://example.org/');
+     const target=require(`../data/analysis/${url.searchParams.get('project')}.json`);
+     assert.ok(target.chapters.some(c=>c.id===url.searchParams.get('chapter')));
+    }else assert.ok(fs.existsSync(ref.url),ref.url);
+   }
+  }
+ }
+ const sqlite=require('../data/analysis/sqlite.json');
+ assert.equal(sqlite.chapters.filter(c=>c.lectureComparison).length,6);
+ assert.ok(sqlite.files['src/shell.c'].text.includes('sqlite_complete(zSql)'));
+ assert.ok(sqlite.files['src/where.c'].text.includes('aOrder[i] = i;'));
+ const review=require('../data/analysis/lecture/database-review.json');
+ assert.equal(review.siteVersion,'2.0.0');assert.equal(review.lectureVersion,'3.53.4');
+ assert.ok(review.files.length>=15);
+ for(const file of review.files)assert.match(file.sha256,/^[a-f0-9]{64}$/);
 });

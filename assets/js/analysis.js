@@ -18,6 +18,34 @@ function pageUrl(line){
  if(full) {p.set('file',file); p.set('view','full');}
  return 'analysis.html?'+p+(line ? '#L'+line : '');
 }
+function openGuide(){
+ if(!$('learning-guide').hidden){$('learning-guide').open=true;$('learning-guide').scrollIntoView({block:'start'});}
+}
+function renderGuide(){
+ const guide=project.guide;if(!guide)return;
+ $('learning-guide').hidden=false;$('guide-title').textContent=guide.title;
+ const intro=document.createElement('p');intro.textContent=guide.summary;$('guide-content').append(intro);
+ for(const item of guide.sections){
+  const section=document.createElement('section'),heading=document.createElement('h3');heading.textContent=item.title;section.append(heading);
+  for(const text of item.paragraphs){const p=document.createElement('p');p.textContent=text;section.append(p);}
+  if(item.code){const pre=document.createElement('pre'),code=document.createElement('code');code.textContent=item.code;pre.append(code);section.append(pre);}
+  if(item.table){
+   const wrap=document.createElement('div'),table=document.createElement('table'),head=document.createElement('thead'),body=document.createElement('tbody'),row=document.createElement('tr');
+   wrap.className='guide-table';
+   for(const text of item.table.headers){const th=document.createElement('th');th.scope='col';th.textContent=text;row.append(th);}head.append(row);
+   for(const values of item.table.rows){const tr=document.createElement('tr');for(const value of values){const td=document.createElement('td');td.textContent=value;tr.append(td);}body.append(tr);}
+   table.append(head,body);wrap.append(table);section.append(wrap);
+  }
+  if(item.references){const refs=document.createElement('ul');refs.className='guide-references';
+   for(const ref of item.references){const li=document.createElement('li'),a=document.createElement('a');a.textContent=ref.title;a.href=ref.url;li.append(a);refs.append(li);}section.append(refs);
+  }
+  $('guide-content').append(section);
+ }
+ const a=document.createElement('a');a.className='guide-outline-link';a.href=`analysis.html?project=${projectId}#learning-guide`;a.textContent=guide.title;
+ a.addEventListener('click',e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;e.preventDefault();history.pushState(null,'',pageUrl()+'#learning-guide');closeOutline();openGuide();$('guide-title').focus({preventScroll:true});});
+ $('chapter-nav').prepend(a);
+}
+window.addEventListener('hashchange',()=>{if(location.hash==='#learning-guide')openGuide();});
 function renderCode(){
  const chapter = project.chapters[current];
  const lines = project.files[file].text.split('\n');
@@ -47,6 +75,10 @@ function render(){
  $('chapter-summary').textContent=chapter.summary; $('chapter-question').textContent=chapter.question;
  $('chapter-notes').replaceChildren();
  for(const note of chapter.notes){const section=document.createElement('section'),h=document.createElement('h3'),p=document.createElement('p');h.textContent=note.title;p.textContent=note.body;section.append(h,p);$('chapter-notes').append(section);}
+ if(chapter.lectureComparison){
+  const note=chapter.lectureComparison,section=document.createElement('aside'),h=document.createElement('h3'),p=document.createElement('p');
+  section.className='lecture-comparison';h.textContent='강의와 대조 · '+note.title;p.textContent=note.body;section.append(h,p);$('chapter-notes').append(section);
+ }
  document.querySelectorAll('[data-chapter]').forEach(a=>{if(a.dataset.chapter===chapter.id)a.setAttribute('aria-current','step');else a.removeAttribute('aria-current');});
  document.querySelectorAll('[data-directory]').forEach(group=>{
   const active=group.dataset.directory===chapter.directory;
@@ -79,6 +111,7 @@ function restoreLocation(){
  current=Math.max(0,project.chapters.findIndex(c=>c.id===p.get('chapter')));
  const selected=p.get('file');full=p.get('view')==='full' && Object.hasOwn(project.files,selected);
  file=full?selected:project.chapters[current].file;render();
+ if(location.hash==='#learning-guide'){openGuide();return;}
  const line=document.getElementById(location.hash.slice(1));if(line)line.scrollIntoView({block:'center'});
 }
 $('previous').addEventListener('click',()=>{if(current>0)choose(current-1);});
@@ -89,7 +122,7 @@ $('full-file').addEventListener('click',()=>{full=true;history.pushState(null,''
 window.addEventListener('popstate',()=>{if(project)restoreLocation();});
 (async()=>{
  try{
-  const response=await fetch(`data/analysis/${projectId}.json`);if(!response.ok)throw Error(response.status);project=await response.json();
+  const response=await fetch(`data/analysis/${projectId}.json`,{cache:'no-cache'});if(!response.ok)throw Error(response.status);project=await response.json();
   $('outline-project').textContent=`${project.title} ${project.version}`;
   $('project-name').textContent=project.title; $('project-version').textContent=project.version; $('project-heading').textContent=`${project.title} ${project.version}`;
   $('panel-title').textContent=`${projectId}/source.notes`; $('project-description').textContent=project.description;
@@ -120,6 +153,7 @@ window.addEventListener('popstate',()=>{if(project)restoreLocation();});
    if(!fileGroups.has(directory)){const group=document.createElement('optgroup');group.label=directory;fileGroups.set(directory,group);$('source-file').append(group);}
    const option=document.createElement('option');option.value=name;option.textContent=name;fileGroups.get(directory).append(option);
   }
+  renderGuide();
   $('analysis-body').hidden=false; $('load-status').hidden=true;restoreLocation();
  }catch{$('load-status').textContent='분석 데이터를 불러오지 못했습니다. 페이지를 새로고침해 주세요.';}
 })();

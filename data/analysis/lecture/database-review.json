@@ -1,0 +1,82 @@
+{
+  "reviewedAt": "2026-09-17",
+  "sourceRoot": "~/lectures/database",
+  "siteVersion": "2.0.0",
+  "lectureVersion": "3.53.4",
+  "scope": "소스 안내 및 지정 함수의 정적 대조. 전체 강의 실습 재실행 아님.",
+  "files": [
+    {
+      "path": "database_course_sqlite_postgresql.md",
+      "sha256": "3842a439b29dc243cc85d50db7833c3959aeb2c158f263feb0fece10c42565b8"
+    },
+    {
+      "path": "output/week2-2-sqlite-lab-v01/SOURCE_GUIDE.md",
+      "sha256": "4f166e289c0e708026cfbf4b1be0ec3e8c120395b9cb7a3ff4a3e9a35cf5e6d7"
+    },
+    {
+      "path": "output/week3-2-sqlite-lab-v01/README.md",
+      "sha256": "d711605abd83ad80eaaa90025ff1ecde19cf038cfd3a711519c3af597365671f"
+    },
+    {
+      "path": "output/week3-2-sqlite-lab-v01/SOURCES.md",
+      "sha256": "d884f6100afaf7b6ad4dd0005303fe6911010e5dfbe0ca40c309c1e7d5e5813d"
+    },
+    {
+      "path": "output/week4-2-sqlite-lab-v01/SOURCE_GUIDE.md",
+      "sha256": "7d8b059734c897aeceb5f03468405a767041e7ce2e6f7d0906a94465a2ee1eb8"
+    },
+    {
+      "path": "output/week5-2-sqlite-lab-v01/SOURCE_GUIDE.md",
+      "sha256": "8c08cf35bd5ac8c65e36e79126297ab1e1d0b3e54a29d459bc153b66f60a8bfb"
+    },
+    {
+      "path": "output/week6-7-sqlite-labs-v01/SOURCE_GUIDE_WEEK6.md",
+      "sha256": "a7216ffbcd280cb20dd744690b5a5e1f875d669b45e5fc1dfa23545183a447ed"
+    },
+    {
+      "path": "output/week6-7-sqlite-labs-v01/SOURCE_GUIDE_WEEK7.md",
+      "sha256": "31e7f673c62ac956cbb1798d38c02d7bf847c760efd3b1b7b5f1b56980875b71"
+    },
+    {
+      "path": "output/week6-7-sqlite-labs-v01/SOURCES.md",
+      "sha256": "f6b779d5e5be3c149824c8472fd06d83e3434634cdc54038d09cbfc757295364"
+    },
+    {
+      "path": "output/week6-7-sqlite-labs-v01/vendor/sqlite-src-3530400/VERSION",
+      "sha256": "632cf989f3b8c2925dc35a67d06535db480cb97d53f78c14bb159f3de4e9bb04"
+    },
+    {
+      "path": "output/week6-7-sqlite-labs-v01/vendor/sqlite-src-3530400/src/legacy.c",
+      "sha256": "a9491dee918654a10468df6e09f3fa538be888e93450331782812ef277bf1c74"
+    },
+    {
+      "path": "output/week6-7-sqlite-labs-v01/vendor/sqlite-src-3530400/src/vdbe.c",
+      "sha256": "d92cb9c4edabd099a5e6e9aa796f4e524bcd00ff9d90e51468ac96d4c6d6ca1d"
+    },
+    {
+      "path": "output/week6-7-sqlite-labs-v01/vendor/sqlite-src-3530400/src/where.c",
+      "sha256": "e96a8fea366c785acbdc19ef4bd31f1d4cbe5a2aa7661a1286a1f4e491ae547c"
+    },
+    {
+      "path": "output/week6-7-sqlite-labs-v01/vendor/sqlite-src-3530400/src/wal.c",
+      "sha256": "0c0467f7c4de773512b3327b0d3973fc31d50cf74603d6aec0e3b3e1c787e217"
+    },
+    {
+      "path": "output/week6-7-sqlite-labs-v01/vendor/sqlite-src-3530400/src/parse.y",
+      "sha256": "19628d51a728421581e9075c7b4fd2c67218c5ad30718c7ae7ab0717c9e93185"
+    },
+    {
+      "path": "output/week6-7-sqlite-labs-v01/vendor/sqlite-src-3530400/src/shell.c.in",
+      "sha256": "9376229a20b68dc7bd17e01675d07dd4cda4d7aed0c8292202336a1b9eb5935b"
+    },
+    {
+      "path": "output/week6-7-sqlite-labs-v01/vendor/sqlite-src-3530400/src/pager.c",
+      "sha256": "58ada0bd1f081e31c4871d4933e1aed660ae81603c215cfbac0454b5c80f8343"
+    },
+    {
+      "path": "output/week6-7-sqlite-labs-v01/vendor/sqlite-src-3530400/src/btree.c",
+      "sha256": "c0982890bcd01b479c66066030e32d15b88a2dce2dd9fd67fa301211555f7a94"
+    }
+  ],
+  "lectureArchiveSha3_256": "b834d474b9b393d85a9e3ee4cc11f1329e007e9376a424ee740796f5c4bda3a8"
+}

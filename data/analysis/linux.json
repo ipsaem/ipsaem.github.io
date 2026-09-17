@@ -1255,5 +1255,174 @@
         "tools/build.c"
       ]
     }
-  ]
+  ],
+  "guide": {
+    "title": "QEMU로 Linux 0.11 실행하기",
+    "summary": "x86 PC 에뮬레이션, 부팅 이미지와 루트 파일시스템 준비, 실행 옵션과 GDB 연결을 차례로 확인합니다.",
+    "sections": [
+      {
+        "title": "1. QEMU의 역할과 설치",
+        "paragraphs": [
+          "QEMU는 CPU·메모리·BIOS·디스크·화면을 갖춘 가상 PC를 제공합니다. Linux 0.11을 실행하려면 사용자 프로그램용 qemu-user가 아니라 시스템 에뮬레이터 qemu-system-i386을 사용합니다. Apple Silicon에서도 x86 명령을 실행하도록 TCG를 지정합니다. QEMU 설치와 오래된 커널 빌드는 별개의 준비 과정입니다."
+        ],
+        "code": "# macOS: Homebrew가 설치된 경우\nbrew install qemu\n\n# Debian / Ubuntu\nsudo apt-get install qemu-system\n\n# 설치 확인\nqemu-system-i386 --version",
+        "references": [
+          {
+            "title": "QEMU 공식 설치 안내",
+            "url": "https://www.qemu.org/download/"
+          }
+        ]
+      },
+      {
+        "title": "2. 소스 파일만으로는 부팅할 수 없다",
+        "paragraphs": [
+          "이 사이트의 공식 원본과 강의 lab/init/main.c는 읽기용 소스입니다. 실행에는 부트 섹터·setup·커널을 묶은 Image와, 당시 커널이 읽을 수 있는 MINIX 파일시스템 및 /bin/sh·/etc/rc·장치 파일을 담은 루트 디스크가 필요합니다. 빈 디스크를 만드는 것만으로는 셸이 실행되지 않습니다.",
+          "실습 경로로는 Linux 0.11 Lab의 소스와 rootfs/hdc-0.11.img.xz를 함께 준비할 수 있습니다. 아래 링크는 확인한 리비전으로 고정했습니다. 해당 프로젝트의 빌드 안내로 images/Image를 만든 뒤, rootfs의 압축된 디스크를 풉니다. 호환 포트에는 빌드 도구와 코드 수정이 포함될 수 있으므로 이 사이트의 kernel.org 원본과 동일한 바이너리라고 보지 않습니다.",
+          "공식 0.11 Makefile은 as86·ld86과 당시 GCC 옵션을 사용합니다. 오늘날의 macOS cc로 make만 실행하는 절차는 아닙니다. 소스를 수정하며 실험하려면 포트가 요구하는 x86 크로스 컴파일러와 링커를 준비하고 해당 README를 따르세요. 미리 빌드된 이미지를 쓸 때도 커널·루트 디스크의 출처와 해시를 함께 기록합니다."
+        ],
+        "code": "git clone https://github.com/yifengyou/linux-0.11-lab.git\ncd linux-0.11-lab\ngit checkout 37d7de8bb2c0b90044de524d3604538401b5f1cd\n\n# README의 호스트별 빌드 도구를 준비한 환경에서\nmake\n# make가 성공하여 images/Image가 생긴 뒤 진행합니다.\n# 루트 이미지가 아직 압축되어 있다면 (xz 필요)\nxz -dk rootfs/hdc-0.11.img.xz",
+        "references": [
+          {
+            "title": "Linux 0.11 Lab: 소스와 빌드 안내",
+            "url": "https://github.com/yifengyou/linux-0.11-lab/tree/37d7de8bb2c0b90044de524d3604538401b5f1cd"
+          },
+          {
+            "title": "같은 리비전의 루트 이미지",
+            "url": "https://github.com/yifengyou/linux-0.11-lab/blob/37d7de8bb2c0b90044de524d3604538401b5f1cd/rootfs/hdc-0.11.img.xz"
+          },
+          {
+            "title": "공식 원본 빌드 코드 읽기",
+            "url": "analysis.html?project=linux&chapter=tree"
+          }
+        ]
+      },
+      {
+        "title": "3. 루트 장치가 이미지와 맞는지 확인",
+        "paragraphs": [
+          "다음 예제는 부팅 이미지를 플로피 A에, 루트 디스크를 첫 IDE 하드디스크에 연결합니다. 루트가 그 디스크의 첫 파티션이라면 커널 이미지의 루트 장치 값도 0x0301이어야 합니다. Linux 0.11에서 이 장치의 이름은 /dev/hd1입니다. hdc-0.11.img라는 호스트 파일명이 게스트의 장치 번호를 정하지는 않습니다.",
+          "공식 원본 Makefile의 기본값 /dev/hd6은 이 배치와 다릅니다. 이 Lab은 make start-hd에서 루트 장치를 0301로 설정합니다. QEMU를 직접 실행하는 아래 절차에서는 부팅 이미지를 Image-hd로 복사하고 Lab의 도구로 복사본만 설정합니다. 이어서 부트 서명과 실제 기록 값을 읽어 확인합니다."
+        ],
+        "code": "# 이 Lab의 작업 폴더에서, 부팅 이미지 복사본의 루트 장치 설정\ncp images/Image images/Image-hd\nbash tools/setrootdev.sh images/Image-hd 0301\n\n# 읽기 검증\npython3 - <<'PY'\nfrom pathlib import Path\nboot = Path('images/Image-hd').read_bytes()[:512]\nassert len(boot) == 512 and boot[510:512] == b'\\x55\\xaa'\nroot = int.from_bytes(boot[508:510], 'little')\nprint('root device =', hex(root))\nassert root == 0x0301\nPY",
+        "references": [
+          {
+            "title": "루트 장치 값을 기록하는 tools/build.c",
+            "url": "analysis.html?project=linux&chapter=dir-tools"
+          },
+          {
+            "title": "Lab의 루트 장치 설정 도구",
+            "url": "https://github.com/yifengyou/linux-0.11-lab/blob/37d7de8bb2c0b90044de524d3604538401b5f1cd/tools/setrootdev.sh"
+          }
+        ]
+      },
+      {
+        "title": "4. 가상 PC 실행",
+        "paragraphs": [
+          "아래는 앞에서 준비한 두 이미지가 서로 맞는 경우의 실행 예제입니다. 16 MiB 메모리와 단일 CPU, 레거시 PC·IDE·플로피 구성을 사용합니다. 그래픽 창의 VGA 콘솔에서 출력을 보고 키보드를 입력합니다. 기본 0.11 콘솔은 직렬 콘솔이 아니므로 -nographic만 붙이면 셸 출력이 터미널에 나온다고 가정하지 마세요."
+        ],
+        "code": "qemu-system-i386 \\\n  -machine pc -accel tcg -m 16 -smp 1 \\\n  -boot order=a \\\n  -drive file=images/Image-hd,if=floppy,index=0,format=raw \\\n  -drive file=rootfs/hdc-0.11.img,if=ide,index=0,format=raw \\\n  -snapshot -nic none",
+        "table": {
+          "headers": [
+            "옵션",
+            "이 실습에서의 의미"
+          ],
+          "rows": [
+            [
+              "-machine pc / -accel tcg",
+              "레거시 x86 PC와 소프트웨어 CPU 에뮬레이션"
+            ],
+            [
+              "-boot order=a",
+              "BIOS가 플로피 A부터 부팅"
+            ],
+            [
+              "if=floppy / if=ide",
+              "Image와 루트 디스크를 서로 다른 장치에 연결"
+            ],
+            [
+              "format=raw",
+              "두 입력을 raw 디스크 이미지로 해석"
+            ],
+            [
+              "-snapshot",
+              "게스트 쓰기를 임시 변경분에 보관. 종료하면 변경분을 버림"
+            ],
+            [
+              "-nic none",
+              "네트워크 장치 없이 시작"
+            ]
+          ]
+        },
+        "references": [
+          {
+            "title": "QEMU 실행 옵션",
+            "url": "https://www.qemu.org/docs/master/system/invocation.html"
+          }
+        ]
+      },
+      {
+        "title": "5. 부팅 결과와 문제를 소스에 연결",
+        "paragraphs": [
+          "부팅 메시지 이후 /etc/rc 실행과 셸 프롬프트까지 확인해야 사용자 공간 진입을 확인한 것입니다. 셸에서 pwd, ls /, cat /etc/rc를 시도하고 init/main.c의 open·execve·wait 설명으로 돌아오세요. 종료 전 게스트에서 sync를 실행한 뒤 QEMU 창을 닫습니다. -snapshot 예제의 수정 내용은 남지 않습니다."
+        ],
+        "table": {
+          "headers": [
+            "증상",
+            "확인할 지점"
+          ],
+          "rows": [
+            [
+              "부팅 가능한 디스크가 없다는 BIOS 메시지",
+              "Image 경로·부트 서명·플로피 연결·부팅 순서"
+            ],
+            [
+              "루트 마운트 실패 또는 하드디스크 읽기 오류",
+              "ROOT_DEV, 첫 IDE 디스크의 파티션, MINIX 형식, 이미지가 요구하는 디스크 기하 정보와 에뮬레이터 버전"
+            ],
+            [
+              "초기화 메시지는 보이지만 셸이 없음",
+              "루트 파일시스템의 /bin/sh, /dev/tty0, /etc/rc 및 바이너리 호환성"
+            ],
+            [
+              "창이 멈춘 채 아무것도 실행하지 않음",
+              "-S로 시작했다면 GDB에서 continue가 필요"
+            ],
+            [
+              "소스의 줄과 디버거 위치가 다름",
+              "Image와 심벌 파일이 동일한 빌드인지, 호환 포트의 수정 사항이 있는지"
+            ]
+          ]
+        },
+        "references": [
+          {
+            "title": "init과 시작 스크립트",
+            "url": "analysis.html?project=linux&chapter=init-rc"
+          },
+          {
+            "title": "블록 장치 설명",
+            "url": "analysis.html?project=linux&chapter=dir-kernel-blk_drv"
+          }
+        ]
+      },
+      {
+        "title": "6. GDB로 main 앞에서 멈추기",
+        "paragraphs": [
+          "위 QEMU 실행 명령 끝에 -S -gdb tcp:127.0.0.1:1234를 추가합니다. -S는 CPU를 시작하지 않고 기다리며 -gdb는 디버거 연결을 받습니다. 포트가 이미 사용 중이면 다른 번호를 골라 양쪽을 맞추세요.",
+          "x86를 지원하는 GDB에서 같은 Image를 만들 때 생성한 심벌 파일을 엽니다. 이 Lab은 images/kernel.sym, 다른 포트는 tools/system 등의 이름을 사용합니다. 원시 부팅 이미지 Image 자체는 심벌 파일이 아닙니다. hbreak는 커널이 로드되기 전에 설정하는 중단점이 로딩에 덮어써지는 일을 피하는 데 적합합니다."
+        ],
+        "code": "gdb images/kernel.sym\n\n# GDB 안에서\nset architecture i386\ntarget remote 127.0.0.1:1234\nhbreak main\ncontinue\ninfo registers\nbt",
+        "references": [
+          {
+            "title": "QEMU의 GDB 사용 안내",
+            "url": "https://www.qemu.org/docs/master/system/gdb.html"
+          }
+        ]
+      },
+      {
+        "title": "확인한 범위",
+        "paragraphs": [
+          "2026-09-17 현재 작업 환경의 QEMU 11.1.1에서 PC·TCG·플로피·IDE·snapshot 옵션으로 가상 머신을 생성하는 검사를 수행했습니다. 이 검사는 빈 임시 이미지로 CPU를 정지한 상태에서 수행했으며 Linux 0.11 부팅 검증은 아닙니다. 제공된 강의 폴더에는 main.c만 있고 부팅 이미지와 루트 파일시스템은 없어 실제 셸 진입은 검증하지 않았습니다."
+        ]
+      }
+    ]
+  }
 }
