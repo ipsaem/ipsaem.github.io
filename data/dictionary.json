@@ -1,0 +1,1548 @@
+{
+  "title": "김치하 한영사전",
+  "restoredCount": 117,
+  "sources": [
+    {
+      "file": "data/archive/page-1.html",
+      "url": "https://web.archive.org/web/20030606185245/http://kimchiha.manazone.com/?page=1&action=list&sort=kor&order=asc",
+      "timestamp": "20030606185245",
+      "reportedTotal": 117,
+      "rows": 12,
+      "sha256": "e8dc152f73ac7071a74896f14607a5312064f46545a69f604359258c48d7716b"
+    },
+    {
+      "file": "data/archive/page-10.html",
+      "url": "https://web.archive.org/web/20030604134340/http://kimchiha.manazone.com/?page=10&action=list&sort=kor&order=asc",
+      "timestamp": "20030604134340",
+      "reportedTotal": 117,
+      "rows": 9,
+      "sha256": "5b08432e90dff08629a492b776d6121bc0ef20288d73e50d9f5bd8f5933e9bb6"
+    },
+    {
+      "file": "data/archive/page-2-later.html",
+      "url": "https://web.archive.org/web/20030606034312/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+      "timestamp": "20030606034312",
+      "reportedTotal": 117,
+      "rows": 12,
+      "sha256": "2eba17663169781440e90609f13174a43b208f7c799e3843e3a8a65e75a4541f"
+    },
+    {
+      "file": "data/archive/page-2.html",
+      "url": "https://web.archive.org/web/20021209093455/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+      "timestamp": "20021209093455",
+      "reportedTotal": 95,
+      "rows": 12,
+      "sha256": "cc1454fcb48176f956db3c8d4d544646c5552ddc9bdca0484cff689bea74cb03"
+    },
+    {
+      "file": "data/archive/page-3.html",
+      "url": "https://web.archive.org/web/20030523151538/http://kimchiha.manazone.com/?page=3&action=list&sort=kor&order=asc",
+      "timestamp": "20030523151538",
+      "reportedTotal": 117,
+      "rows": 12,
+      "sha256": "c51facdd57db939cb0d7ba94c2c670b8b5ad423a428d205af356249f81df8e92"
+    },
+    {
+      "file": "data/archive/page-4.html",
+      "url": "https://web.archive.org/web/20030524152144/http://kimchiha.manazone.com/?page=4&action=list&sort=kor&order=asc",
+      "timestamp": "20030524152144",
+      "reportedTotal": 117,
+      "rows": 12,
+      "sha256": "1140202cfd8a4b0cc333f11c688e312225982b69837707b9357486036966cc5a"
+    },
+    {
+      "file": "data/archive/page-5.html",
+      "url": "https://web.archive.org/web/20030525131148/http://kimchiha.manazone.com/?page=5&action=list&sort=kor&order=asc",
+      "timestamp": "20030525131148",
+      "reportedTotal": 117,
+      "rows": 12,
+      "sha256": "84ef726e8ce13e981b7d358b7086e3eab8ad5fb6f22a839dd4c43b1096660d5b"
+    },
+    {
+      "file": "data/archive/page-6.html",
+      "url": "https://web.archive.org/web/20030606053821/http://kimchiha.manazone.com/?page=6&action=list&sort=kor&order=asc",
+      "timestamp": "20030606053821",
+      "reportedTotal": 117,
+      "rows": 12,
+      "sha256": "198bcb2a7fdd270733d03734471d4bbf9d68a635e612dea4e824aeaa21374698"
+    },
+    {
+      "file": "data/archive/page-7.html",
+      "url": "https://web.archive.org/web/20030606061038/http://kimchiha.manazone.com/?page=7&action=list&sort=kor&order=asc",
+      "timestamp": "20030606061038",
+      "reportedTotal": 117,
+      "rows": 12,
+      "sha256": "aed073824cbad44a26557b34b0ab3675cb23d35d6653be3666397154a7be487c"
+    },
+    {
+      "file": "data/archive/page-8.html",
+      "url": "https://web.archive.org/web/20030606062048/http://kimchiha.manazone.com/?page=8&action=list&sort=kor&order=asc",
+      "timestamp": "20030606062048",
+      "reportedTotal": 117,
+      "rows": 12,
+      "sha256": "73073a0d5046d3d8a03a2546ec30ebf46a72bb0c0406cba965ccc99a942702ed"
+    },
+    {
+      "file": "data/archive/page-9.html",
+      "url": "https://web.archive.org/web/20030606064413/http://kimchiha.manazone.com/?page=9&action=list&sort=kor&order=asc",
+      "timestamp": "20030606064413",
+      "reportedTotal": 117,
+      "rows": 12,
+      "sha256": "290a6cd2c01cbe2a9082448abb2bf1207338311a958a751976d76970d24edebf"
+    }
+  ],
+  "entries": [
+    {
+      "id": "28",
+      "kor": "가려진",
+      "eng": "background",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606185245/http://kimchiha.manazone.com/?page=1&action=list&sort=kor&order=asc",
+          "timestamp": "20030606185245"
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "kor": "강시",
+      "eng": "zombie",
+      "contributor": "영상이",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606185245/http://kimchiha.manazone.com/?page=1&action=list&sort=kor&order=asc",
+          "timestamp": "20030606185245"
+        }
+      ]
+    },
+    {
+      "id": "29",
+      "kor": "개방",
+      "eng": "open",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606185245/http://kimchiha.manazone.com/?page=1&action=list&sort=kor&order=asc",
+          "timestamp": "20030606185245"
+        }
+      ]
+    },
+    {
+      "id": "30",
+      "kor": "고객",
+      "eng": "client",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606185245/http://kimchiha.manazone.com/?page=1&action=list&sort=kor&order=asc",
+          "timestamp": "20030606185245"
+        }
+      ]
+    },
+    {
+      "id": "31",
+      "kor": "고아인",
+      "eng": "orphaned",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606185245/http://kimchiha.manazone.com/?page=1&action=list&sort=kor&order=asc",
+          "timestamp": "20030606185245"
+        }
+      ]
+    },
+    {
+      "id": "33",
+      "kor": "교정도구",
+      "eng": "debugger",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606185245/http://kimchiha.manazone.com/?page=1&action=list&sort=kor&order=asc",
+          "timestamp": "20030606185245"
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "kor": "구동기",
+      "eng": "driver",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606185245/http://kimchiha.manazone.com/?page=1&action=list&sort=kor&order=asc",
+          "timestamp": "20030606185245"
+        }
+      ]
+    },
+    {
+      "id": "118",
+      "kor": "구조",
+      "eng": "struct",
+      "contributor": "Merong",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606185245/http://kimchiha.manazone.com/?page=1&action=list&sort=kor&order=asc",
+          "timestamp": "20030606185245"
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "kor": "굳은모",
+      "eng": "hardware",
+      "contributor": "후리자",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606185245/http://kimchiha.manazone.com/?page=1&action=list&sort=kor&order=asc",
+          "timestamp": "20030606185245"
+        }
+      ]
+    },
+    {
+      "id": "117",
+      "kor": "규정함수",
+      "eng": "function prototypes",
+      "contributor": "ins",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606185245/http://kimchiha.manazone.com/?page=1&action=list&sort=kor&order=asc",
+          "timestamp": "20030606185245"
+        }
+      ]
+    },
+    {
+      "id": "111",
+      "kor": "그릇",
+      "eng": "catchall",
+      "contributor": "이준기",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606185245/http://kimchiha.manazone.com/?page=1&action=list&sort=kor&order=asc",
+          "timestamp": "20030606185245"
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "kor": "그림자",
+      "eng": "shadow",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606185245/http://kimchiha.manazone.com/?page=1&action=list&sort=kor&order=asc",
+          "timestamp": "20030606185245"
+        }
+      ]
+    },
+    {
+      "id": "36",
+      "kor": "글쇠",
+      "eng": "key",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606034312/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20030606034312"
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "kor": "기기",
+      "eng": "device",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606034312/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20030606034312"
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "kor": "기억장소",
+      "eng": "memory",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606034312/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20030606034312"
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "kor": "깨끗한",
+      "eng": "clean",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606034312/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20030606034312"
+        },
+        {
+          "url": "https://web.archive.org/web/20021209093455/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20021209093455"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "kor": "껍데기",
+      "eng": "shell",
+      "contributor": "후리자",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606034312/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20030606034312"
+        },
+        {
+          "url": "https://web.archive.org/web/20021209093455/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20021209093455"
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "kor": "꾸러미",
+      "eng": "package",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606034312/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20030606034312"
+        },
+        {
+          "url": "https://web.archive.org/web/20021209093455/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20021209093455"
+        }
+      ]
+    },
+    {
+      "id": "130",
+      "kor": "끝돌이",
+      "eng": "endian",
+      "contributor": "iz",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606034312/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20030606034312"
+        }
+      ]
+    },
+    {
+      "id": "41",
+      "kor": "나무",
+      "eng": "tree",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606034312/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20030606034312"
+        },
+        {
+          "url": "https://web.archive.org/web/20021209093455/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20021209093455"
+        }
+      ]
+    },
+    {
+      "id": "42",
+      "kor": "나쁜 운",
+      "eng": "dump",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606034312/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20030606034312"
+        },
+        {
+          "url": "https://web.archive.org/web/20021209093455/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20021209093455"
+        }
+      ]
+    },
+    {
+      "id": "43",
+      "kor": "논리적 오류",
+      "eng": "bug",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606034312/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20030606034312"
+        },
+        {
+          "url": "https://web.archive.org/web/20021209093455/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20021209093455"
+        }
+      ]
+    },
+    {
+      "id": "125",
+      "kor": "단말기",
+      "eng": "terminal",
+      "contributor": "Merong",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606034312/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20030606034312"
+        }
+      ]
+    },
+    {
+      "id": "44",
+      "kor": "단편",
+      "eng": "fragment",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606034312/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20030606034312"
+        },
+        {
+          "url": "https://web.archive.org/web/20021209093455/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20021209093455"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "kor": "대롱",
+      "eng": "pipe",
+      "contributor": "악필",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20021209093455/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20021209093455"
+        },
+        {
+          "url": "https://web.archive.org/web/20030523151538/http://kimchiha.manazone.com/?page=3&action=list&sort=kor&order=asc",
+          "timestamp": "20030523151538"
+        }
+      ]
+    },
+    {
+      "id": "45",
+      "kor": "대롱",
+      "eng": "queue",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20021209093455/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20021209093455"
+        },
+        {
+          "url": "https://web.archive.org/web/20030523151538/http://kimchiha.manazone.com/?page=3&action=list&sort=kor&order=asc",
+          "timestamp": "20030523151538"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "kor": "더미",
+      "eng": "heap",
+      "contributor": "후리자",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20021209093455/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20021209093455"
+        },
+        {
+          "url": "https://web.archive.org/web/20030523151538/http://kimchiha.manazone.com/?page=3&action=list&sort=kor&order=asc",
+          "timestamp": "20030523151538"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "kor": "덩이",
+      "eng": "block",
+      "contributor": "후리자",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20021209093455/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20021209093455"
+        },
+        {
+          "url": "https://web.archive.org/web/20030523151538/http://kimchiha.manazone.com/?page=3&action=list&sort=kor&order=asc",
+          "timestamp": "20030523151538"
+        }
+      ]
+    },
+    {
+      "id": "128",
+      "kor": "덩이 특별 화일",
+      "eng": "block special file",
+      "contributor": "Merong",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030523151538/http://kimchiha.manazone.com/?page=3&action=list&sort=kor&order=asc",
+          "timestamp": "20030523151538"
+        }
+      ]
+    },
+    {
+      "id": "46",
+      "kor": "도로 지도",
+      "eng": "road map",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20021209093455/http://kimchiha.manazone.com/?page=2&action=list&sort=kor&order=asc",
+          "timestamp": "20021209093455"
+        },
+        {
+          "url": "https://web.archive.org/web/20030523151538/http://kimchiha.manazone.com/?page=3&action=list&sort=kor&order=asc",
+          "timestamp": "20030523151538"
+        }
+      ]
+    },
+    {
+      "id": "47",
+      "kor": "독립변수",
+      "eng": "argument",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030523151538/http://kimchiha.manazone.com/?page=3&action=list&sort=kor&order=asc",
+          "timestamp": "20030523151538"
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "kor": "동등 프로세스",
+      "eng": "co-process",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030523151538/http://kimchiha.manazone.com/?page=3&action=list&sort=kor&order=asc",
+          "timestamp": "20030523151538"
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "kor": "드러난",
+      "eng": "foreground",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030523151538/http://kimchiha.manazone.com/?page=3&action=list&sort=kor&order=asc",
+          "timestamp": "20030523151538"
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "kor": "떠돌이",
+      "eng": "datagram",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030523151538/http://kimchiha.manazone.com/?page=3&action=list&sort=kor&order=asc",
+          "timestamp": "20030523151538"
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "kor": "떠돌이 패킷",
+      "eng": "udp packet",
+      "contributor": "김정균",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030523151538/http://kimchiha.manazone.com/?page=3&action=list&sort=kor&order=asc",
+          "timestamp": "20030523151538"
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "kor": "망",
+      "eng": "network",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030523151538/http://kimchiha.manazone.com/?page=3&action=list&sort=kor&order=asc",
+          "timestamp": "20030523151538"
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "kor": "머릿부",
+      "eng": "header",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030524152144/http://kimchiha.manazone.com/?page=4&action=list&sort=kor&order=asc",
+          "timestamp": "20030524152144"
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "kor": "메아리",
+      "eng": "echo",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030524152144/http://kimchiha.manazone.com/?page=4&action=list&sort=kor&order=asc",
+          "timestamp": "20030524152144"
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "kor": "모음 처리부",
+      "eng": "library routine",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030524152144/http://kimchiha.manazone.com/?page=4&action=list&sort=kor&order=asc",
+          "timestamp": "20030524152144"
+        }
+      ]
+    },
+    {
+      "id": "25",
+      "kor": "모음함수",
+      "eng": "library",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030524152144/http://kimchiha.manazone.com/?page=4&action=list&sort=kor&order=asc",
+          "timestamp": "20030524152144"
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "kor": "무른모",
+      "eng": "software",
+      "contributor": "햏자",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030524152144/http://kimchiha.manazone.com/?page=4&action=list&sort=kor&order=asc",
+          "timestamp": "20030524152144"
+        }
+      ]
+    },
+    {
+      "id": "127",
+      "kor": "문자 특별 화일",
+      "eng": "character special file",
+      "contributor": "Merong",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030524152144/http://kimchiha.manazone.com/?page=4&action=list&sort=kor&order=asc",
+          "timestamp": "20030524152144"
+        }
+      ]
+    },
+    {
+      "id": "26",
+      "kor": "미결",
+      "eng": "pending",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030524152144/http://kimchiha.manazone.com/?page=4&action=list&sort=kor&order=asc",
+          "timestamp": "20030524152144"
+        }
+      ]
+    },
+    {
+      "id": "27",
+      "kor": "방송",
+      "eng": "broadcasting",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030524152144/http://kimchiha.manazone.com/?page=4&action=list&sort=kor&order=asc",
+          "timestamp": "20030524152144"
+        }
+      ]
+    },
+    {
+      "id": "48",
+      "kor": "번역기",
+      "eng": "compiler",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030524152144/http://kimchiha.manazone.com/?page=4&action=list&sort=kor&order=asc",
+          "timestamp": "20030524152144"
+        }
+      ]
+    },
+    {
+      "id": "119",
+      "kor": "번역시간",
+      "eng": "complie time",
+      "contributor": "?",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030524152144/http://kimchiha.manazone.com/?page=4&action=list&sort=kor&order=asc",
+          "timestamp": "20030524152144"
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "kor": "보쌈",
+      "eng": "packet",
+      "contributor": "후리자",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030524152144/http://kimchiha.manazone.com/?page=4&action=list&sort=kor&order=asc",
+          "timestamp": "20030524152144"
+        }
+      ]
+    },
+    {
+      "id": "121",
+      "kor": "부정",
+      "eng": "indeterminate",
+      "contributor": "영호",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030524152144/http://kimchiha.manazone.com/?page=4&action=list&sort=kor&order=asc",
+          "timestamp": "20030524152144"
+        }
+      ]
+    },
+    {
+      "id": "49",
+      "kor": "비봉쇄",
+      "eng": "non-block",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030525131148/http://kimchiha.manazone.com/?page=5&action=list&sort=kor&order=asc",
+          "timestamp": "20030525131148"
+        }
+      ]
+    },
+    {
+      "id": "115",
+      "kor": "비일시저장",
+      "eng": "unbuffered",
+      "contributor": "박태진",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030525131148/http://kimchiha.manazone.com/?page=5&action=list&sort=kor&order=asc",
+          "timestamp": "20030525131148"
+        }
+      ]
+    },
+    {
+      "id": "101",
+      "kor": "사상",
+      "eng": "mapping",
+      "contributor": "armadillo",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030525131148/http://kimchiha.manazone.com/?page=5&action=list&sort=kor&order=asc",
+          "timestamp": "20030525131148"
+        }
+      ]
+    },
+    {
+      "id": "50",
+      "kor": "사슬",
+      "eng": "chain",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030525131148/http://kimchiha.manazone.com/?page=5&action=list&sort=kor&order=asc",
+          "timestamp": "20030525131148"
+        }
+      ]
+    },
+    {
+      "id": "51",
+      "kor": "사용등록",
+      "eng": "login",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030525131148/http://kimchiha.manazone.com/?page=5&action=list&sort=kor&order=asc",
+          "timestamp": "20030525131148"
+        }
+      ]
+    },
+    {
+      "id": "52",
+      "kor": "사용마감",
+      "eng": "logout",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030525131148/http://kimchiha.manazone.com/?page=5&action=list&sort=kor&order=asc",
+          "timestamp": "20030525131148"
+        }
+      ]
+    },
+    {
+      "id": "112",
+      "kor": "상징적 연결",
+      "eng": "symbolic link",
+      "contributor": "성재원",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030525131148/http://kimchiha.manazone.com/?page=5&action=list&sort=kor&order=asc",
+          "timestamp": "20030525131148"
+        }
+      ]
+    },
+    {
+      "id": "53",
+      "kor": "상태",
+      "eng": "status",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030525131148/http://kimchiha.manazone.com/?page=5&action=list&sort=kor&order=asc",
+          "timestamp": "20030525131148"
+        }
+      ]
+    },
+    {
+      "id": "54",
+      "kor": "색인",
+      "eng": "index",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030525131148/http://kimchiha.manazone.com/?page=5&action=list&sort=kor&order=asc",
+          "timestamp": "20030525131148"
+        }
+      ]
+    },
+    {
+      "id": "55",
+      "kor": "생",
+      "eng": "raw",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030525131148/http://kimchiha.manazone.com/?page=5&action=list&sort=kor&order=asc",
+          "timestamp": "20030525131148"
+        }
+      ]
+    },
+    {
+      "id": "98",
+      "kor": "생소켓",
+      "eng": "raw socket",
+      "contributor": "후리자",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030525131148/http://kimchiha.manazone.com/?page=5&action=list&sort=kor&order=asc",
+          "timestamp": "20030525131148"
+        }
+      ]
+    },
+    {
+      "id": "56",
+      "kor": "선별",
+      "eng": "mask",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030525131148/http://kimchiha.manazone.com/?page=5&action=list&sort=kor&order=asc",
+          "timestamp": "20030525131148"
+        }
+      ]
+    },
+    {
+      "id": "57",
+      "kor": "선택사항",
+      "eng": "option",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606053821/http://kimchiha.manazone.com/?page=6&action=list&sort=kor&order=asc",
+          "timestamp": "20030606053821"
+        }
+      ]
+    },
+    {
+      "id": "58",
+      "kor": "소식",
+      "eng": "message",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606053821/http://kimchiha.manazone.com/?page=6&action=list&sort=kor&order=asc",
+          "timestamp": "20030606053821"
+        }
+      ]
+    },
+    {
+      "id": "113",
+      "kor": "소식 대롱",
+      "eng": "message queue",
+      "contributor": "배영부",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606053821/http://kimchiha.manazone.com/?page=6&action=list&sort=kor&order=asc",
+          "timestamp": "20030606053821"
+        }
+      ]
+    },
+    {
+      "id": "59",
+      "kor": "수면",
+      "eng": "sleep",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606053821/http://kimchiha.manazone.com/?page=6&action=list&sort=kor&order=asc",
+          "timestamp": "20030606053821"
+        }
+      ]
+    },
+    {
+      "id": "108",
+      "kor": "시동덩이",
+      "eng": "boot block",
+      "contributor": "changkhan",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606053821/http://kimchiha.manazone.com/?page=6&action=list&sort=kor&order=asc",
+          "timestamp": "20030606053821"
+        }
+      ]
+    },
+    {
+      "id": "61",
+      "kor": "실타래",
+      "eng": "thread",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606053821/http://kimchiha.manazone.com/?page=6&action=list&sort=kor&order=asc",
+          "timestamp": "20030606053821"
+        }
+      ]
+    },
+    {
+      "id": "107",
+      "kor": "썩어",
+      "eng": "comtech",
+      "contributor": "pili",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606053821/http://kimchiha.manazone.com/?page=6&action=list&sort=kor&order=asc",
+          "timestamp": "20030606053821"
+        }
+      ]
+    },
+    {
+      "id": "109",
+      "kor": "악수",
+      "eng": "handshake",
+      "contributor": "김두현",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606053821/http://kimchiha.manazone.com/?page=6&action=list&sort=kor&order=asc",
+          "timestamp": "20030606053821"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "kor": "알맹이",
+      "eng": "kernel",
+      "contributor": "후리자",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606053821/http://kimchiha.manazone.com/?page=6&action=list&sort=kor&order=asc",
+          "timestamp": "20030606053821"
+        }
+      ]
+    },
+    {
+      "id": "99",
+      "kor": "어버이",
+      "eng": "parent",
+      "contributor": "고영록",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606053821/http://kimchiha.manazone.com/?page=6&action=list&sort=kor&order=asc",
+          "timestamp": "20030606053821"
+        }
+      ]
+    },
+    {
+      "id": "62",
+      "kor": "여과기",
+      "eng": "filter",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606053821/http://kimchiha.manazone.com/?page=6&action=list&sort=kor&order=asc",
+          "timestamp": "20030606053821"
+        }
+      ]
+    },
+    {
+      "id": "122",
+      "kor": "연결목록",
+      "eng": "linked list",
+      "contributor": "박태진",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606053821/http://kimchiha.manazone.com/?page=6&action=list&sort=kor&order=asc",
+          "timestamp": "20030606053821"
+        }
+      ]
+    },
+    {
+      "id": "64",
+      "kor": "연속처리",
+      "eng": "stream",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606061038/http://kimchiha.manazone.com/?page=7&action=list&sort=kor&order=asc",
+          "timestamp": "20030606061038"
+        }
+      ]
+    },
+    {
+      "id": "129",
+      "kor": "오류",
+      "eng": "error",
+      "contributor": "bestjo7",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606061038/http://kimchiha.manazone.com/?page=7&action=list&sort=kor&order=asc",
+          "timestamp": "20030606061038"
+        }
+      ]
+    },
+    {
+      "id": "65",
+      "kor": "완충영역",
+      "eng": "buffer",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606061038/http://kimchiha.manazone.com/?page=7&action=list&sort=kor&order=asc",
+          "timestamp": "20030606061038"
+        }
+      ]
+    },
+    {
+      "id": "67",
+      "kor": "윤곽",
+      "eng": "virtual",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606061038/http://kimchiha.manazone.com/?page=7&action=list&sort=kor&order=asc",
+          "timestamp": "20030606061038"
+        }
+      ]
+    },
+    {
+      "id": "116",
+      "kor": "일",
+      "eng": "task",
+      "contributor": "Merong",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606061038/http://kimchiha.manazone.com/?page=7&action=list&sort=kor&order=asc",
+          "timestamp": "20030606061038"
+        }
+      ]
+    },
+    {
+      "id": "69",
+      "kor": "일꾼",
+      "eng": "server",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606061038/http://kimchiha.manazone.com/?page=7&action=list&sort=kor&order=asc",
+          "timestamp": "20030606061038"
+        }
+      ]
+    },
+    {
+      "id": "70",
+      "kor": "일시중단",
+      "eng": "interrupt",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606061038/http://kimchiha.manazone.com/?page=7&action=list&sort=kor&order=asc",
+          "timestamp": "20030606061038"
+        }
+      ]
+    },
+    {
+      "id": "71",
+      "kor": "입력대롱",
+      "eng": "input",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606061038/http://kimchiha.manazone.com/?page=7&action=list&sort=kor&order=asc",
+          "timestamp": "20030606061038"
+        }
+      ]
+    },
+    {
+      "id": "72",
+      "kor": "자명종",
+      "eng": "alarm clock",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606061038/http://kimchiha.manazone.com/?page=7&action=list&sort=kor&order=asc",
+          "timestamp": "20030606061038"
+        }
+      ]
+    },
+    {
+      "id": "126",
+      "kor": "전산망",
+      "eng": "network",
+      "contributor": "Merong",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606061038/http://kimchiha.manazone.com/?page=7&action=list&sort=kor&order=asc",
+          "timestamp": "20030606061038"
+        }
+      ]
+    },
+    {
+      "id": "114",
+      "kor": "접속",
+      "eng": "interface",
+      "contributor": "박태진",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606061038/http://kimchiha.manazone.com/?page=7&action=list&sort=kor&order=asc",
+          "timestamp": "20030606061038"
+        }
+      ]
+    },
+    {
+      "id": "73",
+      "kor": "지도자",
+      "eng": "manager",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606061038/http://kimchiha.manazone.com/?page=7&action=list&sort=kor&order=asc",
+          "timestamp": "20030606061038"
+        }
+      ]
+    },
+    {
+      "id": "110",
+      "kor": "지렁이",
+      "eng": "warm",
+      "contributor": "이준기",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606062048/http://kimchiha.manazone.com/?page=8&action=list&sort=kor&order=asc",
+          "timestamp": "20030606062048"
+        }
+      ]
+    },
+    {
+      "id": "74",
+      "kor": "지시어",
+      "eng": "instruction",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606062048/http://kimchiha.manazone.com/?page=8&action=list&sort=kor&order=asc",
+          "timestamp": "20030606062048"
+        }
+      ]
+    },
+    {
+      "id": "75",
+      "kor": "지정번호",
+      "eng": "descriptor",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606062048/http://kimchiha.manazone.com/?page=8&action=list&sort=kor&order=asc",
+          "timestamp": "20030606062048"
+        }
+      ]
+    },
+    {
+      "id": "76",
+      "kor": "집단 지도자",
+      "eng": "group leader",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606062048/http://kimchiha.manazone.com/?page=8&action=list&sort=kor&order=asc",
+          "timestamp": "20030606062048"
+        }
+      ]
+    },
+    {
+      "id": "106",
+      "kor": "째깍",
+      "eng": "click",
+      "contributor": "최안식",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606062048/http://kimchiha.manazone.com/?page=8&action=list&sort=kor&order=asc",
+          "timestamp": "20030606062048"
+        }
+      ]
+    },
+    {
+      "id": "77",
+      "kor": "쪽 바꿈자",
+      "eng": "pager",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606062048/http://kimchiha.manazone.com/?page=8&action=list&sort=kor&order=asc",
+          "timestamp": "20030606062048"
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "kor": "차단표시기",
+      "eng": "semaphore",
+      "contributor": "영상이",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606062048/http://kimchiha.manazone.com/?page=8&action=list&sort=kor&order=asc",
+          "timestamp": "20030606062048"
+        }
+      ]
+    },
+    {
+      "id": "79",
+      "kor": "창문",
+      "eng": "window",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606062048/http://kimchiha.manazone.com/?page=8&action=list&sort=kor&order=asc",
+          "timestamp": "20030606062048"
+        }
+      ]
+    },
+    {
+      "id": "80",
+      "kor": "책임 사용자",
+      "eng": "root",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606062048/http://kimchiha.manazone.com/?page=8&action=list&sort=kor&order=asc",
+          "timestamp": "20030606062048"
+        }
+      ]
+    },
+    {
+      "id": "81",
+      "kor": "처리기",
+      "eng": "handler",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606062048/http://kimchiha.manazone.com/?page=8&action=list&sort=kor&order=asc",
+          "timestamp": "20030606062048"
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "kor": "처리기",
+      "eng": "process",
+      "contributor": "영상이",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606062048/http://kimchiha.manazone.com/?page=8&action=list&sort=kor&order=asc",
+          "timestamp": "20030606062048"
+        }
+      ]
+    },
+    {
+      "id": "100",
+      "kor": "처리기",
+      "eng": "processor",
+      "contributor": "거부기",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606062048/http://kimchiha.manazone.com/?page=8&action=list&sort=kor&order=asc",
+          "timestamp": "20030606062048"
+        }
+      ]
+    },
+    {
+      "id": "82",
+      "kor": "처리부",
+      "eng": "routine",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606064413/http://kimchiha.manazone.com/?page=9&action=list&sort=kor&order=asc",
+          "timestamp": "20030606064413"
+        }
+      ]
+    },
+    {
+      "id": "123",
+      "kor": "최소단위적 연산",
+      "eng": "atomic operations",
+      "contributor": "박태진",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606064413/http://kimchiha.manazone.com/?page=9&action=list&sort=kor&order=asc",
+          "timestamp": "20030606064413"
+        }
+      ]
+    },
+    {
+      "id": "83",
+      "kor": "출력대롱",
+      "eng": "output",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606064413/http://kimchiha.manazone.com/?page=9&action=list&sort=kor&order=asc",
+          "timestamp": "20030606064413"
+        }
+      ]
+    },
+    {
+      "id": "120",
+      "kor": "출입지점",
+      "eng": "entry point",
+      "contributor": "Merong",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606064413/http://kimchiha.manazone.com/?page=9&action=list&sort=kor&order=asc",
+          "timestamp": "20030606064413"
+        }
+      ]
+    },
+    {
+      "id": "84",
+      "kor": "통",
+      "eng": "stack",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606064413/http://kimchiha.manazone.com/?page=9&action=list&sort=kor&order=asc",
+          "timestamp": "20030606064413"
+        }
+      ]
+    },
+    {
+      "id": "85",
+      "kor": "퇴장",
+      "eng": "exit",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606064413/http://kimchiha.manazone.com/?page=9&action=list&sort=kor&order=asc",
+          "timestamp": "20030606064413"
+        }
+      ]
+    },
+    {
+      "id": "86",
+      "kor": "특",
+      "eng": "super",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606064413/http://kimchiha.manazone.com/?page=9&action=list&sort=kor&order=asc",
+          "timestamp": "20030606064413"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "kor": "특덩이",
+      "eng": "super block",
+      "contributor": "후리자",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606064413/http://kimchiha.manazone.com/?page=9&action=list&sort=kor&order=asc",
+          "timestamp": "20030606064413"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "kor": "파수꾼",
+      "eng": "daemon",
+      "contributor": "된장",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606064413/http://kimchiha.manazone.com/?page=9&action=list&sort=kor&order=asc",
+          "timestamp": "20030606064413"
+        }
+      ]
+    },
+    {
+      "id": "124",
+      "kor": "파일 지정번호",
+      "eng": "file descriptor",
+      "contributor": "박태진",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606064413/http://kimchiha.manazone.com/?page=9&action=list&sort=kor&order=asc",
+          "timestamp": "20030606064413"
+        }
+      ]
+    },
+    {
+      "id": "87",
+      "kor": "판",
+      "eng": "version",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606064413/http://kimchiha.manazone.com/?page=9&action=list&sort=kor&order=asc",
+          "timestamp": "20030606064413"
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "kor": "포장함수",
+      "eng": "wrapper function",
+      "contributor": "영상이",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030606064413/http://kimchiha.manazone.com/?page=9&action=list&sort=kor&order=asc",
+          "timestamp": "20030606064413"
+        }
+      ]
+    },
+    {
+      "id": "88",
+      "kor": "표시기",
+      "eng": "flag",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030604134340/http://kimchiha.manazone.com/?page=10&action=list&sort=kor&order=asc",
+          "timestamp": "20030604134340"
+        }
+      ]
+    },
+    {
+      "id": "89",
+      "kor": "한칸물림",
+      "eng": "backspace",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030604134340/http://kimchiha.manazone.com/?page=10&action=list&sort=kor&order=asc",
+          "timestamp": "20030604134340"
+        }
+      ]
+    },
+    {
+      "id": "91",
+      "kor": "형식",
+      "eng": "mode",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030604134340/http://kimchiha.manazone.com/?page=10&action=list&sort=kor&order=asc",
+          "timestamp": "20030604134340"
+        }
+      ]
+    },
+    {
+      "id": "92",
+      "kor": "화면표시기",
+      "eng": "monitor",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030604134340/http://kimchiha.manazone.com/?page=10&action=list&sort=kor&order=asc",
+          "timestamp": "20030604134340"
+        }
+      ]
+    },
+    {
+      "id": "93",
+      "kor": "화일명부",
+      "eng": "directory",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030604134340/http://kimchiha.manazone.com/?page=10&action=list&sort=kor&order=asc",
+          "timestamp": "20030604134340"
+        }
+      ]
+    },
+    {
+      "id": "94",
+      "kor": "화점",
+      "eng": "pixel",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030604134340/http://kimchiha.manazone.com/?page=10&action=list&sort=kor&order=asc",
+          "timestamp": "20030604134340"
+        }
+      ]
+    },
+    {
+      "id": "95",
+      "kor": "회계",
+      "eng": "account",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030604134340/http://kimchiha.manazone.com/?page=10&action=list&sort=kor&order=asc",
+          "timestamp": "20030604134340"
+        }
+      ]
+    },
+    {
+      "id": "96",
+      "kor": "회기",
+      "eng": "session",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030604134340/http://kimchiha.manazone.com/?page=10&action=list&sort=kor&order=asc",
+          "timestamp": "20030604134340"
+        }
+      ]
+    },
+    {
+      "id": "97",
+      "kor": "회기 지도자",
+      "eng": "session leader",
+      "contributor": "신승철",
+      "sources": [
+        {
+          "url": "https://web.archive.org/web/20030604134340/http://kimchiha.manazone.com/?page=10&action=list&sort=kor&order=asc",
+          "timestamp": "20030604134340"
+        }
+      ]
+    }
+  ]
+}
